@@ -1,0 +1,84 @@
+/* ========================================
+   国风配色体系 - 完整版
+   ======================================== */
+
+/* 亮色主题（默认） */
+body.light {
+  --bg-gradient-start: #f5efe6;
+  --bg-gradient-end: #e8dccc;
+  --card-bg: rgba(255, 248, 240, 0.94);
+  --text-primary: #2C1810;
+  --text-secondary: #5C2E0A;
+  --border-color: rgba(212, 163, 115, 0.3);
+  --hover-bg: rgba(139, 69, 19, 0.05);
+}
+
+/* 暗色主题 - 墨韵 */
+body.dark {
+  --bg-gradient-start: #1a1a2e;
+  --bg-gradient-end: #0f0f1a;
+  --card-bg: rgba(30, 30, 50, 0.94);
+  --text-primary: #F5E6D3;
+  --text-secondary: #D4A373;
+  --border-color: rgba(212, 163, 115, 0.2);
+  --hover-bg: rgba(212, 163, 115, 0.08);
+}
+
+body.dark {
+  background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+  color: var(--text-primary);
+}
+
+body.dark .glass-card,
+body.dark .window-frame {
+  background: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+body.dark .btn-secondary {
+  background: #3d2a1a;
+  color: #F5E6D3;
+}
+
+body.dark input,
+body.dark select,
+body.dark textarea {
+  background: #2a2a3e;
+  color: #F5E6D3;
+  border-color: #D4A373;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: #8B8B9E;
+}
+
+body.dark .huiwen-border {
+  background: repeating-linear-gradient(
+    90deg,
+    var(--gold) 0px,
+    var(--gold) 3px,
+    transparent 3px,
+    transparent 7px,
+    var(--gold) 7px,
+    var(--gold) 10px,
+    transparent 10px,
+    transparent 14px,
+    var(--gold) 14px,
+    var(--gold) 17px,
+    transparent 17px,
+    transparent 21px
+  );
+}
+
+/* 主题切换过渡动画 */
+body {
+  transition: background 0.3s ease, color 0.2s ease;
+}
+
+.glass-card,
+.window-frame,
+.btn-primary,
+.btn-secondary {
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
